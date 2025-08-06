@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 
 # Load API key
 load_dotenv()
-gemini_api_key = os.getenv("GOOGLE_API_KEY")
+gemini_api_key = os.getenv("GOOGLE_API_KEY")  #set up your google api in .env
 
 # Load and split document
 loader = TextLoader("notes.txt", encoding="utf-8")
@@ -34,7 +34,7 @@ vectorstore = FAISS.from_documents(chunks, embeddings)
 memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
 
-# Prompt (regular one, not chat!)
+# Prompt
 prompt = PromptTemplate(
     input_variables=["chat_history","context", "question"],
   template = """
@@ -63,7 +63,7 @@ Question:
 llm = GoogleGenerativeAI(model="gemini-2.0-flash" , temperature=0.3)
 
 # Chain
-# 🔗 Setup Conversational Retrieval Chain
+#  Setup Conversational Retrieval Chain
 qa_chain = ConversationalRetrievalChain.from_llm(
     llm=llm,
     retriever=vectorstore.as_retriever(),
@@ -133,7 +133,7 @@ explain_legal_term_tool=Tool(
 def legal_draft_tool(instruction: str)->str:
     prompt=f"Please draft a legal document based on this instruction: {instruction}. Keep it in proper legal format."
     response=llm.invoke(prompt)
-    return f"📄 Legal Draft:\n\n{response}"
+    return f" Legal Draft:\n\n{response}"
 legal_draft_tool=Tool(
     name="DraftDocument",
     func=legal_draft_tool,
@@ -152,7 +152,7 @@ agent_executor= initialize_agent(
 
 )
 
-print("\n🤖 Ask your legal assistant! (type 'exit' to quit)\n")
+print("\n Ask your legal assistant! (type 'exit' to quit)\n")
 while True:
     query = input("You: ")
     if query.lower() == "exit":
@@ -161,4 +161,5 @@ while True:
     # Let the agent decide h
     result = agent_executor.invoke({"input": query})
     print(result["output"])  # This includes the final agent output
+
 
