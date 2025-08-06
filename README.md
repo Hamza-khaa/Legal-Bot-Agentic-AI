@@ -1,19 +1,19 @@
-# 🧠 Legal Assistant Bot — LangChain + RAG
+#  Legal Assistant Bot — LangChain + RAG
 
 This is an AI-powered legal assistant built with LangChain, Retrieval-Augmented Generation (RAG), and Gemini (Google Generative AI). It answers user legal questions by retrieving relevant information from legal notes and also supports drafting basic legal documents such as rent agreements, notices, and affidavits.
 
-## 🚀 Features
+##  Features
 
-- 💬 Conversational memory with context-aware responses
-- 📄 Retrieval-based answers using FAISS vector store
-- 🛠️ Tools support:
+-  Conversational memory with context-aware responses
+-  Retrieval-based answers using FAISS vector store
+-  Tools support:
   - Legal database lookup
   - RAG-based knowledge retrieval
   - Legal document drafting
   - General fallback with Gemini
-- 🧠 Uses LangChain’s `ConversationalRetrievalChain` and `initialize_agent`
+-   Uses LangChain’s `ConversationalRetrievalChain` and `initialize_agent`
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - LangChain
 - Google Generative AI (Gemini)
@@ -22,13 +22,13 @@ This is an AI-powered legal assistant built with LangChain, Retrieval-Augmented 
 - dotenv
 - OOP design for tool integration
 
-## 🧪 Example Use Cases
+##  Example Use Cases
 
 - "What is the penalty for copyright infringement?"
 - "Draft a one-year rental agreement between landlord and tenant"
 - "Create an affidavit for address change"
 
-## 📂 How to Run
+##  How to Run
 
 1. Clone the repo:
    ```bash
@@ -41,6 +41,7 @@ This is an AI-powered legal assistant built with LangChain, Retrieval-Augmented 
 4. Run
    python main.py
 
-## Note:This bot is not a substitute for legal advice.
+## Note:
+This bot is not a substitute for legal advice.
 
 Customize notes.txt to include your legal content.
