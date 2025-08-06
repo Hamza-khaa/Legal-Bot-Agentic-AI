@@ -32,8 +32,9 @@ This is an AI-powered legal assistant built with LangChain, Retrieval-Augmented 
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/legal-assistant-bot.git
-   cd legal-assistant-bot
+   git clone https://github.com/Hamza-khaa/Legal-Bot-Agentic-Ai.git
+cd Legal-Bot-Agentic-Ai
+
 2. Set up .ev
    GOOGLE_API_KEY=your_google_gemini_api_key
 3. Install Dependencies
