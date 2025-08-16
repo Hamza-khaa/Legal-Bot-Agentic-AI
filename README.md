@@ -26,7 +26,20 @@
 - **User Authentication**: A basic user authentication system is implemented with `login.html` and `signup.html`, storing user data in a `users.json` file. This allows for personalized chat history for each user.
 - **Scalable Technology Stack**: Built with Python, Flask, LangChain, and LangGraph, the project uses Google's powerful Gemini 2.0 Flash model and is structured for future expansion and integration with more advanced legal tools.
 
+## 📁 Project Structure
 
+├── pycache/           # Python cache files
+├── templates/
+│   ├── index.html         # Main chat interface
+│   ├── login.html         # User login page
+│   └── signup.html        # User signup page
+├── venv/                  # Python virtual environment
+├── .env                   # Environment file for API key
+├── app.py                 # Flask web server and API
+├── main.py                # Core multi-agent logic (LangGraph, LangChain, agents)
+├── notes.txt              # The legal knowledge base for RAG
+├── requirements.txt       # Python dependencies
+└── users.json             # Stores user credentials
 
 ## 🛠️ Installation & Setup
 
