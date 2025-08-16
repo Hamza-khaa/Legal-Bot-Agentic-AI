@@ -28,18 +28,18 @@
 
 ## 📁 Project Structure
 
-├── pycache/           # Python cache files
+├── pycache/           
 ├── templates/
-│   ├── index.html         # Main chat interface
-│   ├── login.html         # User login page
-│   └── signup.html        # User signup page
-├── venv/                  # Python virtual environment
-├── .env                   # Environment file for API key
-├── app.py                 # Flask web server and API
-├── main.py                # Core multi-agent logic (LangGraph, LangChain, agents)
-├── notes.txt              # The legal knowledge base for RAG
-├── requirements.txt       # Python dependencies
-└── users.json             # Stores user credentials
+│   ├── index.html         
+│   ├── login.html         
+│   └── signup.html      
+├── venv/                 
+├── .env                   
+├── app.py                 
+├── main.py                
+├── notes.txt              
+├── requirements.txt       
+└── users.json             
 
 ## 🛠️ Installation & Setup
 
